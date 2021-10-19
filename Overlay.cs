@@ -165,6 +165,10 @@ namespace D2RAssist
                 case MapPosition.TopLeft:
                     anchor = new Point(0, 0);
                     break;
+                case MapPosition.Center:
+                    anchor = new Point((_screen.WorkingArea.Width - gameMap.Width) / 2,
+                        (_screen.WorkingArea.Height - gameMap.Height) / 2);
+                    break;
             }
 
             e.Graphics.DrawImage(gameMap, anchor);
